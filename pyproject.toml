@@ -1,0 +1,62 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "furo50"
+authors = [{name = "ABD-01", email = "myac931@gmail.com"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Framework :: Sphinx :: Extension",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Documentation",
+  "Topic :: Documentation :: Sphinx",
+  "Environment :: Plugins",
+  "Environment :: Web Environment",
+]
+dynamic = ["version", "description"]
+
+keywords = [
+    "documentation",
+    "sphinx",
+    "CS50"
+]
+
+dependencies = [
+    "sphinx>=7.1",
+    "furo"
+]
+
+[project.optional-dependencies]
+sphinx = [
+    "sphinx-design",
+    "myst-parser"
+]
+
+[project.urls]
+Homepage = "https://github.com/ABD-01/furo50"
+
+[tool.flit.module]
+name = "furo50"
+
+[tool.flit.sdist]
+include = [
+    "src/_static/*",
+]
+# exclude = [
+#   ".*",  # Any hidden folders or files
+#   "docs/",
+# ]
+
+[tool.mypy]
+strict = true

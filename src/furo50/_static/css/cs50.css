@@ -1,0 +1,180 @@
+/* Background for code blocks from https://cs50.harvard.edu/x/2020/notes/6/ */
+pre {
+    border: 1px solid var(--color-background-border); /* light: #dee2e6  dark: #495057*/
+    background-color: #f8f9fa;
+}
+@media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) pre {
+        background-color: inherit;
+    }
+}
+
+/* Override settings for links */
+.content a {
+    color: var(--color-brand-primary);
+    text-decoration: none;
+    &:hover {
+        color: var(--color-brand-primary);
+        text-decoration-line: underline;
+        text-underline-offset: 3px;
+        text-decoration-style: solid;
+        text-decoration-color: var(--color-brand-primary);
+    }
+}
+
+
+/* spoilers */
+details {
+    margin-bottom: 1rem;
+}
+details > summary {
+    font-weight: bold;
+}
+
+/* Width */
+.toc-drawer {
+    width: 12em;    /* originally  $sidebar-width = 15em from _scaffold.sass */
+}
+/* 3em from toc-drawer to .sidebar-drawer */
+/* corresponding chanes done on _template/page.html */
+.sidebar-drawer {
+    width: calc(100% - 67em + 3em);     /* calc((100% - #{$full-width}) / 1 + #{$sidebar-width})   from _scaffold.sass */
+}
+/** Noting the widths here
+
+---     ORIGINAL    ---
+$content-padding: 3em;
+$content-padding--small: 1em;
+$content-width: 46em;
+$sidebar-width: 15em;
+$full-width: $content-width + 2 * ($content-padding + $sidebar-width); // 82em
+
+---     UPDATED     ---
+$sidebar-width: 12em; // only for toc-drawer which gave 3em to sidebar-drawer
+In case of no toc
+$content-width = $content-width + $sidebar-width
+*/
+
+/* Sidebar */
+.sidebar-drawer * {
+    font-size: 1.125rem;
+}
+
+/* sidebar add shadow to right instead of border */
+@media (min-width: 67em)  /* $max-width - $sidebar-width */ { 
+    .sidebar-drawer {
+        border-right: unset;
+        box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, .20);
+    }
+}
+
+.sidebar-brand-text {
+    font-size: 2rem;
+    font-weight: bold;
+}
+/* Sidebar links white and Underline on hover */
+.sidebar-drawer a {
+    text-decoration: none;
+    background-color: inherit;
+    border-color: #fff;     /*  $body-bg */
+    color: #fff !important;        /* $body-bg */
+    &:hover {
+        text-decoration-line: underline;
+        text-underline-offset: 3px;
+        text-decoration-style: solid;
+        text-decoration-color: #fff;
+    }
+}
+
+/* Sidebar scroll */
+.sidebar-scroll {
+    flex-grow: unset;
+    flex-shrink: unset;
+    overflow: unset;
+    scroll-behavior: unset;
+}
+/* using these properties for .sidebar-drawer */
+.sidebar-sticky {
+    overflow: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    scroll-behavior: smooth;
+    position: sticky;
+    top: 0;
+    left: 0;
+    max-height: 100vh;
+    scrollbar-color: var(--color-foreground-secondary) var(--color-background-secondary);
+    scrollbar-width: thin;
+    z-index: 1019;
+}
+
+/* sidebar-search */
+.sidebar-search {
+    background-color: var(--color-sidebar-background);
+    border: none;
+
+    &::placeholder {
+        color: var(--color-sidebar-search-foreground);
+    }
+    &:focus {
+        border-bottom: 1px solid var(--color-sidebar-search-border);
+        border-top: 1px solid var(--color-sidebar-search-border);
+    }
+}
+
+.sidebar-search-container:before {
+    z-index: 100;
+    background-color: var(--color-sidebar-search-border);
+}
+
+/* icons */
+.mobile-header i, .sidebar-drawer i{
+   color: #fff !important; 
+}
+.mobile-header .theme-toggle svg {
+    color: #fff !important;
+}
+.bottom-of-page .icons a{
+    color: var(--color-foreground-secondary);
+}
+
+/* fonts */
+body {
+    --font-stack: "PT Sans";
+    font-family: var(--font-stack);
+}
+
+/* marker */
+
+/* + and - */
+[data-marker="+"] > span, [data-marker="-"] > span {
+    cursor: pointer;
+}
+[data-marker="+"] > .fa-li, [data-marker="-"] > .fa-li {
+    user-select: none;
+}
+[data-marker="+"] > .fa-li > .fa-plus-square, [data-marker="-"] > .fa-li > .fa-minus-square {
+    font-size: 80%;
+}
+
+/* + */
+[data-marker="+"] > ol, [data-marker="+"] > ul {
+    display: none;
+}
+
+/* * */
+[data-marker="*"] > .fa-li > .fa-square {
+    font-size: 50%;
+    vertical-align: 25%;
+}
+
+/* heading underlines */
+/* 
+h1, h2, .h1, .h2 {
+    border-bottom-color: #e9ecef;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    padding-bottom: .5rem;
+    border-radius: 0; // override the _scaffold 
+}
+*/
