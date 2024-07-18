@@ -1,0 +1,11 @@
+/* h1,h2,.h1,.h2{border-bottom-color:#e9ecef;border-bottom-style:solid;border-bottom-width: thin;padding-bottom:.5rem;border-radius:0;} */
+
+/* heading underlines */
+
+h1, h2, .h1, .h2 {
+    border-bottom-color: #e9ecef;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    padding-bottom: .5rem;
+    border-radius: 0; /* override the _scaffold */ 
+}
