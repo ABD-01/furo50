@@ -176,7 +176,8 @@ def add_marker_styling(app: Sphinx) -> None:
         crossorigin="anonymous",
         referrerpolicy="no-referrer",
     )
-    app.add_js_file("js/marker.js")
+    app.config.html_static_path.append(str(Path(__file__).parent / "_static" / "js")) 
+    app.add_js_file("marker.js")
 
 
 def update_font_config(app: Sphinx) -> None:
