@@ -12,7 +12,18 @@
       }
       @media(min-width:82em) /* $full-width */ {
           .content {
-              width: 58em; /* $content-width + $sidebar-width */
+              width: 58em; /* $content-width + $sidebar-width (updated) */
+          }
+      }
+      /* Over very big screens */
+      @media (min-width: 100em) {
+          .content {
+              width: 64em; /* $content-width + + $sidebar-width + (12/2) */
+          }
+      }
+      @media (min-width: 110em) {
+          .content {
+              width: 70em; /* $content-width + $sidebar-width + 12 */
           }
       }
     </style>
