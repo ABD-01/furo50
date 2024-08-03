@@ -34,13 +34,17 @@ keywords = [
 
 dependencies = [
     "sphinx>=7.1",
-    "furo"
+    "furo<=2024.7.18"
 ]
 
 [project.optional-dependencies]
-sphinx = [
+docs = [
     "sphinx-design",
     "myst-parser"
+]
+test = [
+    "pytest>=8.0",
+    "cssutils>=2.0.0",
 ]
 
 [project.urls]
@@ -51,7 +55,13 @@ name = "furo50"
 
 [tool.flit.sdist]
 include = [
-    "src/_static/*",
+    "src/",
+    "README.md",
+    "LICENSE",
+]
+exclude = [
+    "docs/",
+    "tests/",
 ]
 # exclude = [
 #   ".*",  # Any hidden folders or files
