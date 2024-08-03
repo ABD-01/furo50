@@ -25,9 +25,7 @@ gray_900    = '#212529'
 black       = '#000'
 # fmt: on
 
-hex2rgb: Callable[[str], str] = lambda h: "{},{},{}".format(
-    *(int(h[i : i + 2], 16) for i in (1, 3, 5))
-)
+hex2rgb: Callable[[str], str] = lambda h: "{},{},{}".format(*(int(h[i : i + 2], 16) for i in (1, 3, 5)))
 
 link_color = "#a51c30"
 link_color_dark = "#ef9aa4"
@@ -47,7 +45,7 @@ body_tertiary_color_dark = f"rgba({hex2rgb(body_color_dark)},.5)"
 border_color_dark = gray_700  # "#495057"
 
 body_bg_dark = gray_900  # "#212529"
-body_secondary_bg_dark = gray_800  #  "#343a40"
+body_secondary_bg_dark = gray_800  # "#343a40"
 nav_link_hover_color_dark = f"color-mix(in srgb, black 70%, {link_color_dark})"
 
 # fmt: off
@@ -108,12 +106,8 @@ header_theme_options = {
     "color-header-text": white,
 }
 
-html_theme_options["light_css_variables"].update(
-    **sidebar_theme_options, **header_theme_options
-)
-html_theme_options["dark_css_variables"].update(
-    **sidebar_theme_options, **header_theme_options
-)
+html_theme_options["light_css_variables"].update(**sidebar_theme_options, **header_theme_options)
+html_theme_options["dark_css_variables"].update(**sidebar_theme_options, **header_theme_options)
 
 pygments_style = "igor"
 pygments_dark_style = "github-dark"
@@ -124,15 +118,9 @@ BLACK_BG = 1
 
 def trim_css(text_css: str) -> str:
     text_css = re.sub(r"/\*.*?\*/", "", text_css, flags=re.DOTALL)  # Remove comments
-    text_css = re.sub(
-        r"^\s+|\s+$", "", text_css, flags=re.MULTILINE
-    )  # Remove leading/trailing whitespace on each line
-    text_css = re.sub(
-        r"\s{2,}", " ", text_css
-    )  # Collapse multiple whitespace characters into a single space
-    text_css = re.sub(
-        r"\s*([\{\}\:\;\,])\s*", r"\1", text_css
-    )  # Remove whitespace around special characters
+    text_css = re.sub(r"^\s+|\s+$", "", text_css, flags=re.MULTILINE)  # Remove leading/trailing whitespace on each line
+    text_css = re.sub(r"\s{2,}", " ", text_css)  # Collapse multiple whitespace characters into a single space
+    text_css = re.sub(r"\s*([\{\}\:\;\,])\s*", r"\1", text_css)  # Remove whitespace around special characters
     return text_css
 
 
@@ -176,7 +164,7 @@ def add_marker_styling(app: Sphinx) -> None:
         crossorigin="anonymous",
         referrerpolicy="no-referrer",
     )
-    app.config.html_static_path.append(str(Path(__file__).parent / "_static" / "js")) 
+    app.config.html_static_path.append(str(Path(__file__).parent / "_static" / "js"))
     app.add_js_file("marker.js")
 
 
@@ -186,9 +174,7 @@ def update_font_config(app: Sphinx) -> None:
         "https://fonts.googleapis.com/css?family=PT+Sans%7CPT+Sans:bold%7CPT+Sans:ital",
         ref="stylesheet",
     )
-    app.add_js_file(
-        "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js", priority=800
-    )
+    app.add_js_file("https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js", priority=800)
     app.add_js_file(
         None,
         body="WebFont.load({google: {families: ['PT Sans', 'PT Sans:bold', 'PT Sans:ital']}});",
@@ -207,18 +193,13 @@ def update_font_config(app: Sphinx) -> None:
 def _update_theme_options(app: Sphinx, config: Config) -> None:
     if app.config.html_theme != "furo":
         raise ConfigError(
-            "Furo50 only supports furo theme. "
-            "Either change your theme or remove furo50 from the extensions list."
+            "Furo50 only supports furo theme." "Either change your theme or remove furo50 from the extensions list."
         )
     furo50_style = config.furo50_style.upper()
     if furo50_style not in ["CS50", "CS50X"]:
-        raise ConfigError(
-            f"Unknown furo50_style: {furo50_style}.\nMust be one of (CS50, CS50x)"
-        )
+        raise ConfigError(f"Unknown furo50_style: {furo50_style}.\nMust be one of (CS50, CS50x)")
     options = app.config.html_theme_options
-    update_theme_options(
-        options, sidebar_bg=BLACK_BG if furo50_style == "CS50X" else CRIMSON_BG
-    )
+    update_theme_options(options, sidebar_bg=BLACK_BG if furo50_style == "CS50X" else CRIMSON_BG)
     app.config.pygments_style = pygments_style  # type: ignore[attr-defined]
     app.config.pygments_dark_style = pygments_dark_style  # type: ignore[attr-defined]
 
@@ -231,12 +212,8 @@ def _builder_inited(app: Sphinx) -> None:
 
 def setup(app: Sphinx) -> dict[str, Any]:
     app.add_config_value("furo50_style", default="CS50", rebuild="env", types=[str])
-    app.add_config_value(
-        "furo50_hide_all_toc", default=False, rebuild="env", types=[bool]
-    )
-    app.add_config_value(
-        "furo50_headings_underline", default=False, rebuild="env", types=[bool]
-    )
+    app.add_config_value("furo50_hide_all_toc", default=False, rebuild="env", types=[bool])
+    app.add_config_value("furo50_headings_underline", default=False, rebuild="env", types=[bool])
     app.connect("config-inited", _update_theme_options, priority=1000)
     app.connect("builder-inited", _builder_inited)
     return {
