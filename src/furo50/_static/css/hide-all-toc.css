@@ -1,6 +1,6 @@
 /* Hiding TOC everywhere */
 
-.toc-drawer {
+.toc-drawer, .toc-content-icon  {
     display: none;
 }
 
