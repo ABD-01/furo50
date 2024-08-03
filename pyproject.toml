@@ -70,3 +70,10 @@ exclude = [
 
 [tool.mypy]
 strict = true
+
+[tool.black]
+line-length = 120
+
+[tool.ufmt]
+formatter = "black"
+sorter = "usort"
