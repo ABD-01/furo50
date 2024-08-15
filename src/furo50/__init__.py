@@ -4,7 +4,7 @@ __version__ = "0.1.0"
 
 import re
 from pathlib import Path
-from typing import Any, Callable
+from typing import Any, Callable, Dict
 
 from sphinx.application import Sphinx
 from sphinx.config import Config
@@ -124,7 +124,7 @@ def trim_css(text_css: str) -> str:
     return text_css
 
 
-def update_theme_options(options: dict[str, Any], sidebar_bg: int = CRIMSON_BG) -> None:
+def update_theme_options(options: Dict[str, Any], sidebar_bg: int = CRIMSON_BG) -> None:
     options["light_css_variables"] = options.get("light_css_variables", {})
     options["dark_css_variables"] = options.get("dark_css_variables", {})
 
@@ -210,7 +210,7 @@ def _builder_inited(app: Sphinx) -> None:
     add_marker_styling(app)
 
 
-def setup(app: Sphinx) -> dict[str, Any]:
+def setup(app: Sphinx) -> Dict[str, Any]:
     app.add_config_value("furo50_style", default="CS50", rebuild="env", types=[str])
     app.add_config_value("furo50_hide_all_toc", default=False, rebuild="env", types=[bool])
     app.add_config_value("furo50_headings_underline", default=False, rebuild="env", types=[bool])
