@@ -14,6 +14,7 @@ classifiers = [
   "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.7",
   "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
@@ -42,10 +43,6 @@ docs = [
     "sphinx-design",
     "myst-parser"
 ]
-test = [
-    "pytest>=8.0",
-    "cssutils>=2.0.0",
-]
 
 [project.urls]
 Homepage = "https://github.com/ABD-01/furo50"
@@ -67,6 +64,9 @@ exclude = [
 [tool.mypy]
 strict = true
 exclude = "tests"
+[[tool.mypy.overrides]]
+module = "sphinx.*"
+ignore_missing_imports = true
 
 [tool.black]
 line-length = 120

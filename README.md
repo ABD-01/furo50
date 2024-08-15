@@ -1,6 +1,7 @@
-# furo50
-
-Sphinx Extension that turns furo theme into CS50's theme.
+<h1 align="center">Furo50</h1>
+<p align="center">
+  A sphinx extenstion that turns <a href="https://github.com/pradyunsg/furo">Furo theme</a> into CS50's theme.
+</p>
 
 See \#TODO for more details.
 
