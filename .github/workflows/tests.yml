@@ -28,3 +28,30 @@ jobs:
           pip install tox tox-gh-actions
       - name: Run Tox
         run: tox 
+
+  coverage:
+    permissions: write-all
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python 3.10
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.10"
+
+      - name: Install Dependecies
+        run: |
+          pip install --upgrade pip
+          pip install tox
+
+      - name: Run Tox
+        run: tox -e coverage
+
+      - name: Update resources
+        uses: test-room-7/action-update-file@v1
+        with:
+            file-path: docs/_static/coverage.svg
+            commit-msg: Updating coverage badge
+            allow-removing: true
+            github-token: ${{ secrets.GITHUB_TOKEN }}
