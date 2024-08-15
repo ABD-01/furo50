@@ -63,13 +63,10 @@ exclude = [
     "docs/",
     "tests/",
 ]
-# exclude = [
-#   ".*",  # Any hidden folders or files
-#   "docs/",
-# ]
 
 [tool.mypy]
 strict = true
+exclude = "tests"
 
 [tool.black]
 line-length = 120
