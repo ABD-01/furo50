@@ -200,8 +200,8 @@ def _update_theme_options(app: Sphinx, config: Config) -> None:
         raise ConfigError(f"Unknown furo50_style: {furo50_style}.\nMust be one of (CS50, CS50x)")
     options = app.config.html_theme_options
     update_theme_options(options, sidebar_bg=BLACK_BG if furo50_style == "CS50X" else CRIMSON_BG)
-    app.config.pygments_style = pygments_style  # type: ignore[attr-defined]
-    app.config.pygments_dark_style = pygments_dark_style  # type: ignore[attr-defined]
+    app.config.pygments_style = pygments_style
+    app.config.pygments_dark_style = pygments_dark_style
 
 
 def _builder_inited(app: Sphinx) -> None:
