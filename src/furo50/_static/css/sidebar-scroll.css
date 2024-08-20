@@ -1,0 +1,28 @@
+/**
+ * Updating the sidebar scrolling behaviour
+ * Oriinally, Brand text and search had fixed pposition 
+ * and could only scroll the rest of the navigation part
+ * No the entire sidebar scrolls
+ */
+
+/* Sidebar scroll */
+.sidebar-scroll {
+    flex-grow: unset;
+    flex-shrink: unset;
+    overflow: unset;
+    scroll-behavior: unset;
+}
+/* using these properties for .sidebar-drawer */
+.sidebar-sticky {
+    overflow: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    scroll-behavior: smooth;
+    position: sticky;
+    top: 0;
+    left: 0;
+    max-height: 100vh;
+    scrollbar-color: var(--color-foreground-secondary) var(--color-background-secondary);
+    scrollbar-width: thin;
+    z-index: 1019;
+}

@@ -1,0 +1,86 @@
+/**
+ * Updating layout of the page
+ * These values where taken from furo's source code
+ * and modified according to CS50's page, bootstarp's values
+ * and personal tweaks.
+ * These are experimental and may change
+ */
+
+
+/* Width */
+.sidebar-drawer {
+    max-width: 350px;
+}
+.toc-drawer {
+    width: 12em;    /* originally  $sidebar-width = 15em from _scaffold.sass */
+}
+/* 3em from toc-drawer to .sidebar-drawer */
+/* corresponding chanes done on _template/page.html */
+.sidebar-drawer {
+    --sidebar-width: 18em; /*  15em + Extra 3em from toc-drawer */
+    /* width: calc(100% - 67em + 3em); */    
+    width: calc((100% - 82em) / 1 + var(--sidebar-width));
+    /* Original: width: calc((100% - #{$full-width}) / 2 + #{$sidebar-width})  from _scaffold.sass */
+}
+@media (max-width: 82em) /* $full-width - $sidebar-width < width < $full-width */
+{
+    .sidebar-drawer {
+        width: calc((100% - (82em - var(--sidebar-width) )) / 1 + var(--sidebar-width)); 
+        /* Original: width: calc((100% - #{$full-width - $sidebar-width}) / 2 + #{$sidebar-width}) */
+    }
+}
+@media (max-width: 67em) /* $full-width - $sidebar-width */
+{
+    .sidebar-drawer {
+        width: var(--sidebar-width); 
+        /* original: width: $sidebar-width */
+        left: calc(-1 * var(--sidebar-width));
+    }
+} 
+
+/** Noting the widths here
+
+---     ORIGINAL    ---
+$content-padding: 3em;
+$content-padding--small: 1em;
+$content-width: 46em;
+$sidebar-width: 15em;
+$full-width: $content-width + 2 * ($content-padding + $sidebar-width); // 82em
+
+---     UPDATED     ---
+$sidebar-width: 12em; // only for toc-drawer which gave 3em to sidebar-drawer
+In case of no toc
+$content-width = $content-width + $sidebar-width
+*/
+
+/* Sidebar */
+.sidebar-drawer * {
+    font-size: 1.125rem;
+}
+
+/* Over very big screens */
+/* This is based on trial and error */
+/* I have not found any of these values in CS50 or Furo's stylesheets */
+@media (min-width: 100em) {
+    .content {
+        width: 52em; /* $content-width + (12/2) */
+    }
+}
+@media (min-width: 110em) {
+    .content {
+        width: 58em; /* $content-width + 12 */
+    }
+}
+
+/* sidebar add shadow to right instead of border */
+@media (min-width: 67em)  /* $full-width - $sidebar-width */ { 
+    .sidebar-drawer {
+        border-right: unset;
+        box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, .20);
+    }
+}
+
+.sidebar-brand-text {
+    font-size: 2rem;
+    font-weight: bold;
+}
