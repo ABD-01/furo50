@@ -146,6 +146,10 @@ def update_css_files(app: Sphinx) -> None:
 
     styles_path = Path(__file__).parent / "_static" / "css"
     content = (styles_path / "cs50.css").read_text()
+    content += (styles_path / "sidebar-scroll.css").read_text()
+    
+    if not app.config.furo50_use_original_layout:
+        content += (styles_path / "furo50_scaffold.css").read_text()
 
     if app.config.furo50_hide_all_toc:
         content += (styles_path / "hide-all-toc.css").read_text()
@@ -214,6 +218,7 @@ def setup(app: Sphinx) -> Dict[str, Any]:
     app.add_config_value("furo50_style", default="CS50", rebuild="env", types=[str])
     app.add_config_value("furo50_hide_all_toc", default=False, rebuild="env", types=[bool])
     app.add_config_value("furo50_headings_underline", default=False, rebuild="env", types=[bool])
+    app.add_config_value("furo50_use_original_layout", default=False, rebuild="env", types=[bool])
     app.connect("config-inited", _update_theme_options, priority=1000)
     app.connect("builder-inited", _builder_inited)
     return {

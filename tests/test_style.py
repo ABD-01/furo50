@@ -1,4 +1,5 @@
 import pytest
+import cssutils
 
 
 def read_text(path):
@@ -30,4 +31,10 @@ def test_hide_toc(app, status, warning):
     css_file = app.outdir / "_static" / "furo50.css"
     assert css_file.exists()
     css_text = read_text(css_file)
-    assert ".toc-drawer,.toc-content-icon,.toc-header-icon{display:none;}" in css_text
+    parser = cssutils.CSSParser()
+    stylesheet = parser.parseString(css_text)
+    toc_display = "block"
+    for rule in stylesheet:
+        if rule.type == rule.STYLE_RULE and ".toc-drawer" in rule.selectorText:
+            toc_display = rule.style.getPropertyValue("display")
+    assert toc_display == "none", "Toc should be hidden"
