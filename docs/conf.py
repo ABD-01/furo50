@@ -14,12 +14,39 @@ release = '0.1.0'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = [
+    'furo50',
+    'sphinx.ext.autodoc',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.autosummary',
+    'sphinx.ext.todo',
+    'myst_parser',
+    'sphinx.ext.extlinks',
+    'sphinx_design',
+]
+
+myst_enable_extensions = [
+    "colon_fence",
+    "attrs_inline", "attrs_block",  # Ref: https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#attributes
+    # 'html_image',
+    "dollarmath",
+    ]
+
+todo_include_todos = True
+autodoc_typehints = "description"
+# autodoc_typehints_description_target = "documented"
+# autodoc_typehints_format = "fully-qualified"
+autodoc_preserve_defaults = True
+
+autodoc_default_options = {
+    'members': True,
+    'member-order': 'bysource',
+    'undoc-members': True,
+    'no-value': True,
+}
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-
-
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
@@ -30,6 +57,7 @@ html_logo = '_static/furo50-gray300.png'
 html_favicon = "_static/furo50-crimson.ico"
 html_title = " "
 furo50_style = "CS50"
+furo50_use_original_layout = False
 
 html_theme_options = {
     "footer_icons": [
@@ -47,4 +75,9 @@ html_theme_options = {
     "source_repository": "https://github.com/ABD-01/furo50",
     "source_branch": "master",
     "source_directory": "docs/",
+}
+
+intersphinx_mapping = {
+    "python": ("https://docs.python.org/3", None),
+    "sphinx": ("https://www.sphinx-doc.org/en/master", None),
 }

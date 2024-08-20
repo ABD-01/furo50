@@ -17,8 +17,8 @@ customisation
 :caption: Development
 :hidden:
 
-design
 kitchen-sink/index
+design-changes
 changelog
 license
 ```
