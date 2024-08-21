@@ -147,7 +147,7 @@ def update_css_files(app: Sphinx) -> None:
     styles_path = Path(__file__).parent / "_static" / "css"
     content = (styles_path / "cs50.css").read_text()
     content += (styles_path / "sidebar-scroll.css").read_text()
-    
+
     if not app.config.furo50_use_original_layout:
         content += (styles_path / "furo50_scaffold.css").read_text()
 
