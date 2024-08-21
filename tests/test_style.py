@@ -1,5 +1,5 @@
-import pytest
 import cssutils
+import pytest
 
 
 def read_text(path):
