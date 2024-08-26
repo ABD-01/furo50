@@ -35,4 +35,5 @@ license
 
 [furo link]: https://pradyunsg.me/furo/
 [furo50 link]: https://github.com/ABD-01/furo50
+[cs50 link]: https://cs50.harvard.edu/college/2019/fall/
 [conf link]: https://www.sphinx-doc.org/en/master/usage/configuration.html
