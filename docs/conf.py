@@ -6,31 +6,33 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Furo50'
-copyright = '2024, Muhammed Abdullah'
-author = 'Muhammed Abdullah'
-release = '0.1.0'
+project = "Furo50"
+copyright = "2024, Muhammed Abdullah"
+author = "Muhammed Abdullah"
+release = "0.1.0"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    'furo50',
-    'sphinx.ext.autodoc',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.autosummary',
-    'sphinx.ext.todo',
-    'myst_parser',
-    'sphinx.ext.extlinks',
-    'sphinx_design',
+    "furo50",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.autosummary",
+    "sphinx.ext.todo",
+    "myst_parser",
+    "sphinx.ext.extlinks",
+    "sphinx_design",
+    "sphinx_copybutton",
 ]
 
 myst_enable_extensions = [
     "colon_fence",
-    "attrs_inline", "attrs_block",  # Ref: https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#attributes
+    "attrs_inline",
+    "attrs_block",  # Ref: https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#attributes
     # 'html_image',
     "dollarmath",
-    ]
+]
 
 todo_include_todos = True
 autodoc_typehints = "description"
@@ -39,23 +41,28 @@ autodoc_typehints = "description"
 autodoc_preserve_defaults = True
 
 autodoc_default_options = {
-    'members': True,
-    'member-order': 'bysource',
-    'undoc-members': True,
-    'no-value': True,
+    "members": True,
+    "member-order": "bysource",
+    "undoc-members": True,
+    "no-value": True,
 }
 
-templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+templates_path = ["_templates"]
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'furo'
-html_static_path = ['_static']
-html_logo = '_static/furo50-gray300.png'
+html_title = "Furo50"
+html_theme = "furo"
+html_static_path = ["_static"]
+html_logo = "_static/furo50-gray300.png"
 html_favicon = "_static/furo50-crimson.ico"
-html_title = " "
+html_css_files = [
+    "custom.css",
+]
+html_permalinks_icon = ""
+
 furo50_style = "CS50"
 furo50_use_original_layout = False
 

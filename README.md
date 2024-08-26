@@ -20,36 +20,32 @@
 
 See \#TODO for more details.
 
-## Quickstart
+<!-- index.md content start -->
 
-To use this extension you will need [Furo](https://pradyunsg.me/furo/) theme for your project. 
+## Prerequisites
 
-1. Install Furo50 extension in your sphinx environment.
+To use this extension you will need [Furo][furo link] theme for your project.
 
-```
-pip install furo50
-```
-
-2. 
-Update the html_theme in conf.py.
-
-html_theme = "furo"
-Your Sphinx documentation’s HTML pages will now be generated with this theme! 🎉
-
+Install [furo][furo link]  theme and update html_theme in the [sphinx configuration][conf link]
 
 ## Usage
 
-To use this extension your sphinx theme must be [furo](https://pradyunsg.me/furo/).
+1. Install Furo50 extension in your sphinx environment.
+    ```
+    pip install furo50
+    ```
 
-In your [`conf.py`](https://www.sphinx-doc.org/en/master/usage/configuration.html) configuration file, add `furo50` to your extensions list. E.g.:
-```python
-html_theme = 'furo'
-extensions = [
-    ...
-    'furo50'
-    ...
-]
-```
+2. In the [`conf.py`][conf link] configuration file, add [furo50][furo50 link] to the extensions list.
+    ```
+    extensions = [
+        ...
+        'furo50'
+        ...
+    ]
+    ```
+Your Sphinx documentation’s HTML pages will now be generated with this CS50 theme! 🎉
+
+<!-- index.md content end -->
 
 ## Features
 \#TODO
@@ -64,3 +60,10 @@ extensions = [
 Copyright © 2024, Muhammed Abdullah
 
 This software is made available under the GPL v3.
+
+
+<!-- Markdown links -->
+
+[furo link]: https://pradyunsg.me/furo/
+[furo50 link]: https://github.com/ABD-01/furo50
+[conf link]: https://www.sphinx-doc.org/en/master/usage/configuration.html

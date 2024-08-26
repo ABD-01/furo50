@@ -1,16 +1,24 @@
 
 # Furo50 documentation
 
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
-
+```{include} ../README.md
+:parser: myst_parser.sphinx_
+:start-after: <!-- index.md content start -->
+:end-before: <!-- index.md content end -->
+```
 
 ```{toctree}
 :hidden:
 
 Home <self>
 customisation
+```
+
+```{toctree}
+:caption: Example
+:hidden:
+
+Week 5 Notes <example/week5>
 ```
 
 ```{toctree}
@@ -22,3 +30,9 @@ design-changes
 changelog
 license
 ```
+
+<!-- Markdown links -->
+
+[furo link]: https://pradyunsg.me/furo/
+[furo50 link]: https://github.com/ABD-01/furo50
+[conf link]: https://www.sphinx-doc.org/en/master/usage/configuration.html
