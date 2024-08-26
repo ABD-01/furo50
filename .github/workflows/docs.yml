@@ -3,6 +3,9 @@ on:
   push:
     branches: [master]
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,4 +28,6 @@ jobs:
 
       - name: Run ghp-import
         run: |
+          git config user.name ABD-01
+          git config user.email 63636498+ABD-01@users.noreply.github.com
           ghp-import -n -p -f -o docs/build
