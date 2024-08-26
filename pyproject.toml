@@ -40,8 +40,9 @@ dependencies = [
 
 [project.optional-dependencies]
 docs = [
+    "myst-parser",
     "sphinx-design",
-    "myst-parser"
+    "sphinx-copybutton"
 ]
 
 [project.urls]
