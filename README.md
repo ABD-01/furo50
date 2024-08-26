@@ -1,6 +1,6 @@
 <h1 align="center">Furo50</h1>
 <p align="center">
-  A sphinx extenstion that turns <a href="https://github.com/pradyunsg/furo">Furo theme</a> into CS50's theme.
+  A sphinx extenstion that turns <a href="https://github.com/pradyunsg/furo">Furo theme</a> into [CS50][cs50 link]'s theme.
 </p>
 
 <p align="center">
@@ -47,18 +47,21 @@ Install [furo][furo link]  theme and update html_theme in the [sphinx configurat
         ...
     ]
     ```
-Your Sphinx documentation’s HTML pages will now be generated with this CS50 theme! 🎉
+Your Sphinx documentation’s HTML pages will now be generated with this [CS50][cs50 link] theme! 🎉
+
+## Features
+* **CS50-Inspired Design**: Emulates the look and feel of [CS50][cs50 link]'s course pages.
+* **Easy Configuration**: Simple configuration addition needed in conf.py for quick setup and customization.
+* **Syntax Highlighting**: Incorporates CS50-style syntax highlighting for code blocks, improving code readability.
+* **Sidebar Styles**: Offers both <span style="background-color:#a51c30;color:#fff;">crimson (CS50)</span> and <span  style="background-color:#000;color:#fff;">black (CS50X)</span> sidebar options, allowing users to choose their preferred aesthetic.
+* **Seamless Furo Integration**: Built on top of the Furo theme, and is compatible with Furo's existing features and customizations.
+* and more ...
 
 <!-- index.md content end -->
 
-## Features
-\#TODO
-
-## Acknowledgements
-\#TODO
-
 ## Changelog
-\#TODO
+
+Visit [abd-01.github.io/furo50/changelog](https://abd-01.github.io/furo50/changelog/)
 
 ## Licence
 Copyright © 2024, Muhammed Abdullah
@@ -70,4 +73,5 @@ This software is made available under the GPL v3.
 
 [furo link]: https://pradyunsg.me/furo/
 [furo50 link]: https://github.com/ABD-01/furo50
+[cs50 link]: https://cs50.harvard.edu/college/2019/fall/
 [conf link]: https://www.sphinx-doc.org/en/master/usage/configuration.html
