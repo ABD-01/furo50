@@ -4,23 +4,15 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/ABD-01/furo50/actions/workflows/tests.yml?branch=master">
-        <img src="https://github.com/ABD-01/furo50/actions/workflows/tests.yml/badge.svg?branch=master" alt="Tests">
-    </a>
+    <a href="https://github.com/ABD-01/furo50/actions/workflows/tests.yml?branch=master"><img src="https://github.com/ABD-01/furo50/actions/workflows/tests.yml/badge.svg?branch=master" alt="Tests"></a>
     &emsp;
-    <a href="https://github.com/ABD-01/furo50/actions/workflows/docs.yml?branch=master">
-        <img src="https://github.com/ABD-01/furo50/actions/workflows/docs.yml/badge.svg?branch=master" alt="Docs">
-    </a>
+    <a href="https://github.com/ABD-01/furo50/actions/workflows/docs.yml?branch=master"><img src="https://github.com/ABD-01/furo50/actions/workflows/docs.yml/badge.svg?branch=master" alt="Docs"></a>
     &emsp;
     <img src="docs/_static/coverage.svg" alt="Coverage">
     &emsp;
-    <a href="https://github.com/psf/black">
-        <img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style: black">
-    </a>
+    <a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style: black"></a>
     &emsp;
-    <a href="https://www.gnu.org/licenses/gpl-3.0">
-        <img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3">
-    </a>
+    <a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3"></a>
 </p>
 
 <!-- [![Tests](https://github.com/ABD-01/furo50/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/ABD-01/furo50/actions/workflows/tests.yml) &emsp; ![](docs/_static/coverage.svg) &emsp; [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) -->
