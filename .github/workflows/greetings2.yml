@@ -1,0 +1,15 @@
+on:
+  pull_request_target:
+  workflow_dispatch:
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+        - uses: thollander/actions-comment-pull-request@v1
+          with:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            message: "Hey @${{ github.actor }}! Thanks for your contribution. Please wait while the maintainers review your PR"
