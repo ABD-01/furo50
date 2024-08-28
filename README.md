@@ -1,6 +1,6 @@
 <h1 align="center">Furo50</h1>
 <p align="center">
-  A sphinx extenstion that turns <a href="https://github.com/pradyunsg/furo">Furo theme</a> into <a href="https://cs50.harvard.edu/college/2019/fall/">CS50</a>'s theme.
+  A sphinx extension that turns <a href="https://github.com/pradyunsg/furo">Furo theme</a> into <a href="https://cs50.harvard.edu/college/2019/fall/">CS50</a>'s theme.
 </p>
 
 <p align="center">
