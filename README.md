@@ -1,6 +1,6 @@
 <h1 align="center">Furo50</h1>
 <p align="center">
-  A sphinx extenstion that turns <a href="https://github.com/pradyunsg/furo">Furo theme</a> into [CS50][cs50 link]'s theme.
+  A sphinx extenstion that turns <a href="https://github.com/pradyunsg/furo">Furo theme</a> into <a href="https://cs50.harvard.edu/college/2019/fall/">CS50</a>'s theme.
 </p>
 
 <p align="center">
@@ -8,7 +8,7 @@
     &emsp;
     <a href="https://github.com/ABD-01/furo50/actions/workflows/docs.yml?branch=master"><img src="https://github.com/ABD-01/furo50/actions/workflows/docs.yml/badge.svg?branch=master" alt="Docs"></a>
     &emsp;
-    <img src="docs/_static/coverage.svg" alt="Coverage">
+    <img src="https://raw.githubusercontent.com/ABD-01/furo50/master/docs/_static/coverage.svg" alt="Coverage">
     &emsp;
     <a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style: black"></a>
     &emsp;
@@ -21,8 +21,6 @@
 
 <!-- [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) -->
 
-
-See \#TODO for more details.
 
 <!-- index.md content start -->
 
@@ -61,7 +59,7 @@ Your Sphinx documentation’s HTML pages will now be generated with this [CS50][
 
 ## Changelog
 
-Visit [abd-01.github.io/furo50/changelog](https://abd-01.github.io/furo50/changelog/)
+Visit [furo50/changelog](https://abd-01.github.io/furo50/changelog/)
 
 ## Licence
 Copyright © 2024, Muhammed Abdullah
