@@ -1,6 +1,8 @@
 
 # Furo50 documentation
 
+A sphinx extension that turns [Furo theme][furo link] into [CS50][cs50 link]'s theme.
+
 ```{include} ../README.md
 :parser: myst_parser.sphinx_
 :start-after: <!-- index.md content start -->
