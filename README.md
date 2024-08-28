@@ -14,6 +14,11 @@
     &emsp;
     <a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3"></a>
 </p>
+<p align="center">
+    <a href="https://pypi.org/project/furo50/"><img alt="PyPI - Version" src="https://img.shields.io/pypi/v/furo50"></a>
+    &emsp;
+    <a href="https://pypi.org/project/furo50/"><img alt="PyPI - Pyversions" src="https://img.shields.io/pypi/pyversions/furo50"></a>
+</p>
 
 <!-- [![Tests](https://github.com/ABD-01/furo50/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/ABD-01/furo50/actions/workflows/tests.yml) &emsp; ![](docs/_static/coverage.svg) &emsp; [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) -->
 
