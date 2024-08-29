@@ -3,6 +3,11 @@ pre {
     border: 1px solid var(--color-background-border); /* light: #dee2e6  dark: #495057*/
     background-color: #f8f9fa;
 }
+@media not print {
+    body[data-theme="dark"] pre {
+        background-color: inherit;
+    }
+}
 @media (prefers-color-scheme: dark) {
     body:not([data-theme="light"]) pre {
         background-color: inherit;
