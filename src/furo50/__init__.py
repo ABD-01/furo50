@@ -1,6 +1,6 @@
 """Sphinx Extension that turns furo theme into CS50's theme."""
 
-__version__ = "1.0.0a1"
+__version__ = "1.0.0b1"
 
 import re
 from pathlib import Path
