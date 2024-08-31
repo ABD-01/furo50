@@ -58,9 +58,7 @@ html_theme = "furo"
 html_static_path = ["_static"]
 html_logo = "_static/furo50-gray300.png"
 html_favicon = "_static/furo50-crimson.ico"
-html_css_files = [
-    "custom.css",
-]
+
 html_permalinks_icon = ""
 
 furo50_style = "CS50"
@@ -90,4 +88,7 @@ intersphinx_mapping = {
 }
 
 # CS50 example docs
-html_extra_path = ["example/cs50docs/build/"]
+html_extra_path = [
+    "github-star-btn.html"
+    "example/cs50docs/build/",
+]
