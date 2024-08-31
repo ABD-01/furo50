@@ -21,6 +21,7 @@ customisation
 :hidden:
 
 Week 5 Notes <example/week5>
+CS50 Docs </cs50docs/index.html#http://>
 ```
 
 ```{toctree}
