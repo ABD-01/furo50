@@ -89,6 +89,6 @@ intersphinx_mapping = {
 
 # CS50 example docs
 html_extra_path = [
-    "github-star-btn.html"
+    "github-star-btn.html",
     "example/cs50docs/build/",
 ]
