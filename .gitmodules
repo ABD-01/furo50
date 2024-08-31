@@ -1,0 +1,3 @@
+[submodule "docs/example/cs50docs"]
+	path = docs/example/cs50docs
+	url = git@github.com:ABD-01/cs50.readthedocs.io.git
