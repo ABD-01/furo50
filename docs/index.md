@@ -21,7 +21,7 @@ customisation
 :hidden:
 
 Week 5 Notes <example/week5>
-CS50 Docs </cs50docs/index.html#http://>
+CS50 Docs <https://abd-01.github.io/furo50/cs50docs/>
 ```
 
 ```{toctree}
