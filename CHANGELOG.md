@@ -1,3 +1,6 @@
+## 1.0.0-beta.2 (Jun 11, 2025)
+* Fixed backgorund for code block with caption.
+
 ## 1.0.0-beta.1 (Aug 29, 2024)
 
 * Fixed [#7](https://github.com/ABD-01/furo50/issues/7) code highlighting issue in media with default light mode.
